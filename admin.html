@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">ADMIN</div>
+
+<nav>
+<a href="index.html">Home</a>
+</nav>
+
+</header>
+
+<section>
+
+<h2>Dashboard Overview</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<h3>Total Tickets</h3>
+<p id="ticketCount">0</p>
+</div>
+
+<div class="card">
+<h3>Total Fans</h3>
+<p id="fanCount">0</p>
+</div>
+
+<div class="card">
+<h3>Meet & Greet</h3>
+<p id="meetCount">0</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Search Records</h2>
+
+<input type="text" id="searchInput" placeholder="Search email or ID">
+
+</section>
+
+<section>
+
+<h2>Tickets</h2>
+
+<div id="tickets" class="card-grid"></div>
+
+</section>
+
+<section>
+
+<h2>Meet & Greet</h2>
+
+<div id="meetings" class="card-grid"></div>
+
+</section>
+
+<section>
+
+<h2>Fan Memberships</h2>
+
+<div id="fans" class="card-grid"></div>
+
+</section>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

