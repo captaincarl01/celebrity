@@ -1,3 +1,12 @@
+// MOBILE MENU
+function toggleMenu(){
+
+const nav = document.querySelector("nav");
+
+nav.classList.toggle("active");
+
+}
+
 const tickets = JSON.parse(localStorage.getItem("tickets")) || [];
 
 const fans = JSON.parse(localStorage.getItem("fans")) || [];
