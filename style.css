@@ -139,6 +139,8 @@ border-radius:20px;
 transition:0.4s;
 position: relative;
 min-height: 250px;
+opacity: 1 !important;
+visibility: visible !important;
 }
 
 .card:hover{

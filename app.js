@@ -240,7 +240,7 @@ canvas.height = window.innerHeight;
 
 let particles = [];
 
-for(let i=0;i<40;i++){
+for(let i=0;i<20;i++){
 
 particles.push({
 
@@ -382,10 +382,20 @@ opacity:0,
 duration:1
 });
 
-gsap.from(".card",{
+gsap.fromTo(".hero .card, .card-grid .card",
+
+{
 opacity:0,
-y:40,
+y:40
+},
+
+{
+opacity:1,
+y:0,
+duration:1,
 stagger:0.2
-});
+}
+
+);
 
 }
