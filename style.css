@@ -274,3 +274,27 @@ font-size:45px;
 }
 
 }
+
+.denied-page{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:#070b16;
+color:white;
+padding:20px;
+}
+
+.denied-page h1{
+font-size:60px;
+color:#00f0ff;
+margin-bottom:20px;
+}
+
+.denied-page p{
+color:#aaa;
+margin-bottom:30px;
+font-size:18px;
+}

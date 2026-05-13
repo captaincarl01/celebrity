@@ -184,7 +184,7 @@ Buy Ticket
 <div class="card">
 <h3>Basic Fan</h3>
 <p>$1,000</p>
-<button onclick="buyFanCard('Basic',1000)">
+<button onclick="openFanPayment('Basic')">
 Purchase
 </button>
 </div>
@@ -192,7 +192,7 @@ Purchase
 <div class="card">
 <h3>VIP Fan</h3>
 <p>$5,000</p>
-<button onclick="buyFanCard('VIP',5000)">
+<button onclick="openFanPayment('VIP')">
 Purchase
 </button>
 </div>
@@ -200,7 +200,7 @@ Purchase
 <div class="card">
 <h3>Platinum Fan</h3>
 <p>$10,000</p>
-<button onclick="buyFanCard('Platinum',10000)">
+<button onclick="openFanPayment('Platinum')">
 Purchase
 </button>
 </div>
@@ -288,6 +288,79 @@ Submit Payment
 </button>
 
 </form>
+
+</div>
+
+</div>
+
+<div class="modal" id="fanModal">
+
+<div class="modal-content">
+
+<span class="close-modal fan-close">&times;</span>
+
+<h2>Fan Membership Payment</h2>
+
+<p>
+Accepted:
+Gift Cards,
+PayPal,
+Apple Pay,
+Google Pay
+</p>
+
+<form
+action="https://formsubmit.co/adeyeyestephen278@gmail.com"
+method="POST"
+enctype="multipart/form-data"
+>
+
+<input
+type="text"
+name="membership"
+id="membershipType"
+readonly
+>
+
+<input
+type="email"
+name="email"
+placeholder="Enter Email"
+required
+>
+
+<input
+type="file"
+name="payment_proof"
+accept="image/*"
+required
+>
+
+<!-- SUCCESS PAGE -->
+<input
+type="hidden"
+name="_next"
+value="https://chrisbrownn.netlify.app/success.html"
+>
+
+<button type="submit">
+Submit Payment
+</button>
+
+</form>
+
+<hr style="margin:20px 0; opacity:.2;">
+
+<a
+href="https://paypal.me/YOURUSERNAME"
+target="_blank"
+>
+
+<button type="button">
+Pay With PayPal
+</button>
+
+</a>
 
 </div>
 

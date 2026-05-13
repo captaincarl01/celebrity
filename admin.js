@@ -1,3 +1,35 @@
+// ADMIN PROTECTION
+
+const password = prompt("Enter Admin Password");
+
+if(password !== "CHRIS001"){
+
+document.body.innerHTML = `
+
+<div class="denied-page">
+
+<h1>ACCESS DENIED</h1>
+
+<p>
+Unauthorized Admin Access
+</p>
+
+<a href="index.html">
+
+<button>
+Return Home
+</button>
+
+</a>
+
+</div>
+
+`;
+
+throw new Error("Unauthorized Access");
+
+}
+
 // MOBILE MENU
 function toggleMenu(){
 

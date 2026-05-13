@@ -96,20 +96,21 @@ Reserve Spot
 
 </section>
 
-<!-- PAYMENT MODAL -->
-
-<div class="modal" id="paymentModal">
+<!--Payment Modal-->
+<div class="modal" id="meetModal">
 
 <div class="modal-content">
-<span class="close-modal" onclick="closeModal()">&times;</span>
 
-<h2>Gift Card Payment</h2>
+<span class="close-modal meet-close">&times;</span>
+
+<h2>Meet & Greet Payment</h2>
 
 <p>
 Accepted:
-Apple Gift Card,
-Steam Card,
-Google Play Card
+Gift Cards,
+PayPal,
+Apple Pay,
+Google Pay
 </p>
 
 <form
@@ -135,19 +136,13 @@ required
 <input
 type="hidden"
 name="_subject"
-value="New Gift Card Payment"
->
-
-<input
-type="hidden"
-name="_captcha"
-value="false"
+value="Meet & Greet Payment"
 >
 
 <input
 type="hidden"
 name="_next"
-value="http://127.0.0.1:5500/success.html"
+value="https://chrisbrownn.netlify.app/success.html"
 >
 
 <button type="submit">
@@ -155,6 +150,19 @@ Submit Payment
 </button>
 
 </form>
+
+<hr style="margin:20px 0; opacity:.2;">
+
+<a
+href="https://paypal.me/YOURUSERNAME"
+target="_blank"
+>
+
+<button type="button">
+Pay With PayPal
+</button>
+
+</a>
 
 </div>
 

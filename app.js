@@ -46,6 +46,49 @@ stagger:0.2
 
 }
 
+const fanModal =
+document.getElementById("fanModal");
+
+// OPEN FAN PAYMENT
+function openFanPayment(type){
+
+fanModal.style.display = "flex";
+
+document.body.style.overflow = "hidden";
+
+document.getElementById("membershipType").value = type;
+
+}
+
+// CLOSE FAN MODAL
+const fanClose =
+document.querySelector(".fan-close");
+
+if(fanClose){
+
+fanClose.addEventListener("click",()=>{
+
+fanModal.style.display = "none";
+
+document.body.style.overflow = "auto";
+
+});
+
+}
+
+// CLOSE OUTSIDE
+window.addEventListener("click",(e)=>{
+
+if(e.target === fanModal){
+
+fanModal.style.display = "none";
+
+document.body.style.overflow = "auto";
+
+}
+
+});
+
 // PAYMENT
 const paymentModal =
 document.getElementById("paymentModal");
@@ -84,6 +127,44 @@ window.addEventListener("click",(e)=>{
 if(e.target === paymentModal){
 
 closeModal();
+
+}
+
+});
+
+const meetModal =
+document.getElementById("meetModal");
+
+function openMeetPayment(){
+
+meetModal.style.display = "flex";
+
+document.body.style.overflow = "hidden";
+
+}
+
+const meetClose =
+document.querySelector(".meet-close");
+
+if(meetClose){
+
+meetClose.addEventListener("click",()=>{
+
+meetModal.style.display = "none";
+
+document.body.style.overflow = "auto";
+
+});
+
+}
+
+window.addEventListener("click",(e)=>{
+
+if(e.target === meetModal){
+
+meetModal.style.display = "none";
+
+document.body.style.overflow = "auto";
 
 }
 
