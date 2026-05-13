@@ -1,6 +1,10 @@
 // MOBILE MENU
 function toggleMenu(){
-document.querySelector("nav").classList.toggle("active");
+
+const nav = document.querySelector("nav");
+
+nav.classList.toggle("active");
+
 }
 
 // TYPING EFFECT
@@ -236,7 +240,7 @@ canvas.height = window.innerHeight;
 
 let particles = [];
 
-for(let i=0;i<100;i++){
+for(let i=0;i<40;i++){
 
 particles.push({
 
