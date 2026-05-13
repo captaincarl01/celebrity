@@ -9,6 +9,8 @@ font-family:Poppins,sans-serif;
 background:#070b16;
 color:white;
 overflow-x:hidden;
+min-height: 100vh;
+overflow-y: auto;
 }
 
 header{
@@ -136,7 +138,6 @@ padding:25px;
 border-radius:20px;
 transition:0.4s;
 position: relative;
-overflow: hidden;
 min-height: 250px;
 }
 
@@ -187,12 +188,31 @@ max-width:400px;
 border-radius:20px;
 }
 
+.fan-section{
+position:relative;
+z-index:5;
+}
+
+.fan-grid{
+display:grid !important;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.fan-grid .card{
+display:block !important;
+visibility:visible !important;
+opacity:1 !important;
+min-height:220px;
+}
+
 .fan-ui{
 margin-top:30px;
 background:linear-gradient(135deg,#00f0ff,#8a2be2);
 padding:30px;
 border-radius:20px;
-color:black;
+color: black;
 }
 
 #particles{
