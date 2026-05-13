@@ -47,28 +47,47 @@ stagger:0.2
 }
 
 // PAYMENT
-let paymentType = "";
+const paymentModal =
+document.getElementById("paymentModal");
 
-function showPayment(type){
+const closeModalBtn =
+document.querySelector(".close-modal");
 
-paymentType = type;
+// OPEN EVENT PAYMENT MODAL
+function showPayment(){
 
-document.getElementById("paymentModal").style.display = "flex";
+paymentModal.style.display = "flex";
+
+document.body.style.overflow = "hidden";
+
+}
+
+// CLOSE MODAL
+function closeModal(){
+
+paymentModal.style.display = "none";
+
+document.body.style.overflow = "auto";
 
 }
 
-function confirmPayment(){
+// CLOSE BUTTON
+if(closeModalBtn){
 
-const email = document.getElementById("userEmail").value;
-
-if(!email){
-alert("Enter Email");
-return;
-}
-
-generateTicket(email);
+closeModalBtn.addEventListener("click",closeModal);
 
 }
+
+// CLICK OUTSIDE TO CLOSE
+window.addEventListener("click",(e)=>{
+
+if(e.target === paymentModal){
+
+closeModal();
+
+}
+
+});
 
 // SAVE DATA
 function saveTicket(data){
